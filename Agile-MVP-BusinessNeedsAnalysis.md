@@ -1,26 +1,28 @@
 # MVP \- Analyze the Business Needs
 
 Team Name:  AnimalShelter  
-Team Members: Ava McIntosh, Hunter McIntosh, Cara Zozokos, Gani Sagiev  
+Team Members: Ava McIntosh, Hunter McIntosh, Cara Zozokos, Gani Sagiev, Ardalan Janpour
+
 Project Name: Animal Shelter Pro
 
 ## Problem Statement
 
 > Clearly articulate the problem or pain-point your product aims to solve.      	
 
-Managing the various difficulties of running a pet shelter. 
+Pet shelters face challenges in efficiently managing adoption applications, tracking inventory, and coordinating staff tasks.
 
 ## Vision and Objectives
 
 > Briefly describe the overall vision for your product.
 
-The user is able to easily look over adoption applications. The user can keep track of inventory, pet needs, and customer satisfaction.  
+Platform that streamlines managing adoptions, inventory, and staff, enhancing efficiency and adoption rates.
 
-> Outline the key objectives of the MVP.  
-  * Sort through adoption applications and change their status
-  * Keep track of inventory
-  * Store potential adopter info in an easily searchable database
-  * Assigning staff to appropriate tasks 
+> Outline the key objectives of the MVP.
+
+ *Streamline processing and updating of adoption applications.
+ *Track and manage inventory effectively.
+ *Keep a searchable database of potential adopters.
+ *Assign staff tasks efficiently.
 
 *** 
 
@@ -28,10 +30,11 @@ The user is able to easily look over adoption applications. The user can keep tr
 
 > Define the specific audience or customer segment for the MVP
 
-Pet shelters with a large influx of animals and adopters. 
+Busy pet shelters handling high volumes of animals and adoption requests.
 
 ## Solution Overview
 
 > Provide a high-level overview of the solution your MVP will offer.
 
-  Our product will increase adoption rates by making it easier for the adopters to find a pet, and for the staff to evaluate the adopters. 
+Our solution simplifies the adoption process for adopters and helps staff efficiently manage applications, boosting adoption rates and shelter operations.
+
