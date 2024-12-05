@@ -1,0 +1,50 @@
+<div class="staff-container">
+  <h2>Staff Members</h2>
+
+  <ul *ngIf="staff.length; else noStaff">
+    <li *ngFor="let member of staff">
+      <span>
+        <strong>{{ member.name }}</strong> - {{ member.role }}
+        <br />
+        <small>Email: {{ member.email }}</small>
+        <br />
+        <small>Phone: {{ member.phone }}</small>
+      </span>
+      <button class="delete-btn" (click)="deleteStaff(member.id)">Delete</button>
+    </li>
+  </ul>
+  <ng-template #noStaff>
+    <p style="text-align: center; color: #6c757d;">No staff members available.</p>
+  </ng-template>
+
+  <h3>Add New Staff</h3>
+  <form (ngSubmit)="addStaff()" #staffForm="ngForm">
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      [(ngModel)]="newStaff.name"
+      required
+    />
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      [(ngModel)]="newStaff.email"
+      required
+    />
+    <input
+      type="text"
+      name="phone"
+      placeholder="Phone"
+      [(ngModel)]="newStaff.phone"
+      required
+    />
+    <select name="role" [(ngModel)]="newStaff.role" required>
+      <option value="Manager">Manager</option>
+      <option value="Volunteer">Volunteer</option>
+    </select>
+    <button type="submit" [disabled]="staffForm.invalid">Add Staff</button>
+  </form>
+  <app-notification [message]="notificationMessage" [type]="notificationType"></app-notification>
+</div>

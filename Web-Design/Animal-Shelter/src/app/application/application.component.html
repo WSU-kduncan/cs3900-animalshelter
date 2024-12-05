@@ -1,0 +1,35 @@
+<div class="application-container">
+    
+    <div class="header-section">
+      <h1>Adoption Applications</h1>
+      <p>
+        Review and manage applications to help find loving homes for our furry
+        friends. Approve or reject applications with a single click.
+      </p>
+    </div>
+  
+    
+    <div class="applications-list">
+      <h2>Applications</h2>
+  
+      <ul *ngIf="applications.length; else noApplications">
+        <li *ngFor="let application of applications" [ngClass]="application.status.toLowerCase()">
+          <div class="application-details">
+            <h3>{{ application.name }}</h3>
+            <p><strong>Application ID:</strong> {{ application.id }}</p>
+            <p><strong>Status:</strong> <span class="status">{{ application.status }}</span></p>
+            <p><strong>Submitted:</strong> {{ application.date }}</p>
+          </div>
+          <div class="action-buttons">
+            <button class="approve-btn" (click)="approveApplication(application.id)">Approve</button>
+            <button class="reject-btn" (click)="rejectApplication(application.id)">Reject</button>
+          </div>
+        </li>
+      </ul>
+  
+      <ng-template #noApplications>
+        <p class="no-applications-message">No applications available at the moment.</p>
+      </ng-template>
+    </div>
+  </div>
+  

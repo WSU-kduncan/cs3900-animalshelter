@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mariadb:
     image: mariadb:latest
-    container_name: WSU_2024_improved_w_survey
+    container_name: animal_shelter
     restart: always
     volumes:
       - ./init_shelter.sql:/docker-entrypoint-initdb.d/init.sql
