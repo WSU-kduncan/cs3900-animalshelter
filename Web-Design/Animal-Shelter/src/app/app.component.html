@@ -1,0 +1,21 @@
+<div class="homepage-container">
+  <header [ngClass]="{ highlighted: isHighlighted }">
+    <h1>Pet Shelter Pro</h1>
+  </header>
+
+  <nav class="navbar">
+    <a routerLink="/home" [class.active]="currentSection === 'home'" (click)="setActiveSection('home')">Home</a>
+    <a routerLink="/application" [class.active]="currentSection === 'application'" (click)="setActiveSection('application')">Application</a>
+    <a routerLink="/adopter" [class.active]="currentSection === 'adopter'" (click)="setActiveSection('adopter')">Adopter</a>
+    <a routerLink="/pet" [class.active]="currentSection === 'pet'" (click)="setActiveSection('pet')">Pet</a>
+    <a routerLink="/staff" [class.active]="currentSection === 'staff'" (click)="setActiveSection('staff')">Staff</a>
+  </nav>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Your Website</p>
+  </footer>
+</div>
