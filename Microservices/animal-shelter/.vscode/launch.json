@@ -1,0 +1,37 @@
+{
+    "configurations": [
+      
+      {
+        "type": "java",
+        "name": "WorkOrderProServiceApplication",
+        "request": "launch",
+        "mainClass": "com.wsu.workorderproservice.WorkOrderProServiceApplication",
+        "projectName": "animal-shelter",
+        "args": "",
+        "env": {
+          "SERVER_PORT": "8080",
+          "SERVER_CONTEXT_PATH": "/work-order-pro-service",
+          "DATABASE_DRIVER":"org.mariadb.jdbc.Driver",
+            "DATABASE_PASSWORD":"password",
+          "DATABASE_URL":"jdbc:mariadb://host.docker.internal:3306/shelter",
+          "DATABASE_USERNAME": "user"
+        }
+      },
+      {
+        "type": "java",
+        "name": "WorkOrderProServiceApplication",
+        "request": "launch",
+        "mainClass": "com.wsu.workorderproservice.WorkOrderProServiceApplication",
+        "projectName": "microservices-assignment-1",
+        "args": "",
+        "env": {
+          "SERVER_PORT": "8080",
+          "SERVER_CONTEXT_PATH": "/work-order-pro-service",
+          "DATABASE_DRIVER":"org.mariadb.jdbc.Driver",
+            "DATABASE_PASSWORD":"password",
+          "DATABASE_URL": "jdbc:mariadb://host.docker.internal:3306/shelter",
+          "DATABASE_USERNAME": "user"
+        }
+      }
+    ]
+  }
