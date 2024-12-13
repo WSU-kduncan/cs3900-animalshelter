@@ -5,8 +5,11 @@ The goal of this project was to create a working application that shelters could
 
 ## Business Case and Agile Requirements
 [Link to Business Case Document](#)  
+
 https://github.com/WSU-kduncan/cs3900-animalshelter/blob/main/BR/BR-ProjectRequirementsDocument.md
+
 [Link to Agile Requirements Document](#)
+
 https://github.com/WSU-kduncan/cs3900-animalshelter/tree/main/Agile
 
 ## Build Documentation
