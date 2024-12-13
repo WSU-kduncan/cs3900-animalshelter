@@ -1,0 +1,109 @@
+<div class="pet-container">
+
+    <div class="header-section">
+      <h1>Manage Pets</h1>
+      <p>
+        Keep track of all pets in the shelter. Add new pets, update their details, and
+        track their adoption status effortlessly.
+      </p>
+    </div>
+  
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Search by ID, Name, Species,Breed, Sex,"
+        [(ngModel)]="searchTerm"
+        (input)="filterPets()"
+      />
+    </div>
+    <div class="pet-list-section">
+      <h2>Pet List</h2>
+  
+      <ul *ngIf="pets.length; else noPets">
+        <li *ngFor="let pet of pets" [ngClass]="pet.pet_status.toLowerCase()">
+          <div class="pet-details">
+            <h3>{{ pet.name }}</h3>
+            <p><strong>Species:</strong> {{ pet.species }}</p>
+            <p><strong>Breed:</strong> {{ pet.breed }}</p>
+            <p><strong>Age:</strong> {{ pet.age }} years</p>
+            <p><strong>Status:</strong> <span class="status">{{ pet.pet_status }}</span></p>
+          </div>
+          <div class="action-buttons">
+            <button class="delete-btn" (click)="deletePet(pet.id)">Remove</button>
+          </div>
+        </li>
+      </ul>
+  
+      <ng-template #noPets>
+        <p class="no-pets-message">No pets available. Add a new pet below!</p>
+      </ng-template>
+    </div>
+  
+    
+    <div class="add-pet-section">
+      <h2>Add New Pet</h2>
+      <form (ngSubmit)="addPet()" #petForm="ngForm">
+        <input
+        type="number"
+        name="id"
+        placeholder="Id"
+        [(ngModel)]="newPet.id"
+        required
+      />
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          [(ngModel)]="newPet.name"
+          required
+        />
+        <input
+          type="text"
+          name="species"
+          placeholder="Species"
+          [(ngModel)]="newPet.species"
+          required
+        />
+        <input
+          type="text"
+          name="breed"
+          placeholder="Breed"
+          [(ngModel)]="newPet.breed"
+          required
+        />
+        <select name="sex" [(ngModel)]="newPet.sex" required>
+          <option value="" disabled>Select Sex</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <input
+        type="number"
+        name="weight"
+        placeholder="Weight"
+        [(ngModel)]="newPet.weight"/>
+        <input
+        type="date"
+        name="intakeDate"
+        placeholder="Intake date yyyy/mm/dd"
+        [(ngModel)]="newPet.intake_date"/>
+        <input
+          type="text"
+          name="age"
+          placeholder="Age"
+
+          [(ngModel)]="newPet.age"
+          required
+        />
+        <select name="status" [(ngModel)]="newPet.pet_status" required>
+          <option value="" disabled>Select Status</option>
+          <option value="Available">Available</option>
+          <option value="Adopted">Adopted</option>
+        </select>
+        <button type="submit" class="add-btn" [disabled]="petForm.invalid">Add Pet</button>
+      </form>
+    </div>
+
+  <app-notification [message]="notificationMessage" [type]="notificationType"></app-notification>
+
+  </div>
+  

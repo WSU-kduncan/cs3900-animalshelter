@@ -1,0 +1,180 @@
+
+.application-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  
+  .header-section h1 {
+    color: #4a90e2; 
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .header-section p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  
+  .search-bar {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .search-bar input {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 400px;
+  }
+  .add-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .add-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .add-application-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .add-application-form input,
+  .add-application-form select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .add-application-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .add-application-form button:hover {
+    background-color: #45a049;
+  }
+  .applications-list h2 {
+    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #fff;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  li:hover {
+    transform: translateY(-2px);
+  }
+  
+  .application-details h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333;
+  }
+  
+  .application-details p {
+    margin: 0.5rem 0;
+    color: #555;
+  }
+  
+  .status {
+    font-weight: bold;
+  }
+  
+  .pending .status {
+    color: #ff9900; 
+  }
+  
+  .approved .status {
+    color: #48bb78; 
+  }
+  
+  .rejected .status {
+    color: #e53e3e; 
+  }
+  
+  
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  button {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .approve-btn {
+    background-color: #48bb78; 
+    color: white;
+  }
+  
+  .approve-btn:hover {
+    background-color: #38a169; 
+  }
+  
+  .reject-btn {
+    background-color: #e53e3e; 
+    color: white;
+  }
+  
+  .reject-btn:hover {
+    background-color: #c53030; 
+  }
+  
+ 
+  .no-applications-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+  }
+  

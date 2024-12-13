@@ -1,0 +1,169 @@
+
+.adopter-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9; 
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  
+  .header-section h1 {
+    color: #4a90e2; 
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .header-section p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  
+  .search-bar {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .search-bar input {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 400px;
+  }
+  .adopter-list-section h2 {
+    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .adopter-list-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .adopter-list-section li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #fff;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .adopter-list-section li:hover {
+    transform: translateY(-2px);
+  }
+  
+  .adopter-details h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333;
+  }
+  
+  .adopter-details p {
+    margin: 0.5rem 0;
+    color: #555;
+  }
+  
+  .adopter-details .status {
+    font-weight: bold;
+    color: #48bb78; 
+  }
+  
+  
+  .action-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  button {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .delete-btn {
+    background-color: #e53e3e; 
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c53030;
+  }
+  
+  
+  .add-adopter-section h2 {
+    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .add-adopter-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  input {
+    padding: 0.8rem;
+    border: 1px solid #ced4da; 
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  input:focus {
+    border-color: #4a90e2; 
+    outline: none;
+    box-shadow: 0 0 4px rgba(74, 144, 226, 0.3);
+  }
+  
+  .add-btn {
+    background-color: #48bb78; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  .add-btn:hover {
+    background-color: #38a169; 
+  }
+  
+  .add-btn:disabled {
+    background-color: #a0aec0; 
+    cursor: not-allowed;
+  }
+  
+  
+  .no-adopters-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+  }
+  

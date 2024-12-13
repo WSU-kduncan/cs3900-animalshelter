@@ -1,0 +1,75 @@
+<div class="applications-list">
+  <div class="search-and-title">
+    <div class="search-bar"> <!-- The search bar in the application page. -->
+      <input
+        type="text"
+        placeholder="Search by Application ID or Name"
+        [(ngModel)]="searchTerm"
+        (input)=filterApplications()
+      />
+    </div>
+    <h2>Applications</h2>
+    <button class="add-btn" (click)="toggleAddApplicationForm()">+ Add Application</button>
+  </div>
+
+  <!-- Conditional display of the Add Application Form -->
+  <div *ngIf="showAddForm" class="add-application-form">
+    <form (ngSubmit)="submitApplication()" #applicationForm="ngForm">
+      <input
+        type="text"
+        name="firstName"
+        placeholder="First Name"
+        [(ngModel)]="newApplication.first_name"
+        required
+      />
+      <input
+        type="text"
+        name="lastName"
+        placeholder="Last Name"
+        [(ngModel)]="newApplication.last_name"
+        required
+      />
+      <input
+        type="text"
+        name="phone"
+        placeholder="Phone Number"
+        [(ngModel)]="newApplication.phone"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        [(ngModel)]="newApplication.email"
+        required
+      />
+      <select [(ngModel)]="newApplication.pet_name" name="petName" required>
+        <option *ngFor="let pet of availablePets" [value]="pet.name">{{ pet.name }}</option>
+      </select>
+      <button type="submit" [disabled]="applicationForm.invalid">Submit Application</button>
+      <button type="button" (click)="toggleAddApplicationForm()">Cancel</button>
+    </form>
+  </div>
+
+  <ul *ngIf="applications.length; else noApplications">
+    <li *ngFor="let application of applications" [ngClass]="application.status.toLowerCase()">
+      <div class="application-details">
+        <h3>{{ application.first_name }} {{ application.last_name }}</h3>
+        <p><strong>Application ID:</strong> {{ application.id }}</p>
+        <p><strong>Submitted:</strong> {{ application.date }}</p>
+        <p><strong>Phone:</strong> {{ application.phone }}</p>
+        <p><strong>Email:</strong> {{ application.email }}</p>
+        <p><strong>Pet:</strong> {{ application.pet_name }}</p>
+      </div>
+      <div class="action-buttons">
+        <button class="approve-btn" (click)="approveApplication(application.id)">Approve</button>
+        <button class="reject-btn" (click)="rejectApplication(application.id)">Reject</button>
+        <p><span class="status"><font size="5">{{ application.status }}</font></span></p>
+      </div>
+    </li>
+  </ul>
+
+  <ng-template #noApplications>
+    <p class="no-applications-message">No applications available at the moment.</p>
+  </ng-template>
+</div>

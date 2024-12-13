@@ -1,0 +1,72 @@
+<div class="adopter-container">
+    
+    <div class="header-section">
+      <h1>Adopter Management</h1>
+      <p>
+        Keep track of adopters and their details. Add new adopters, view their
+        information, and manage them efficiently.
+      </p>
+    </div>
+  
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Search by Application ID or Name"
+        [(ngModel)]="searchTerm"
+        (input)="filterAdopters()"
+      />
+    </div>
+    
+    <div class="adopter-list-section">
+      <h2>Adopter List</h2>
+  
+      <ul *ngIf="adopters.length; else noAdopters">
+        <li *ngFor="let adopter of adopters">
+          <div class="adopter-details">
+            <h3>{{ adopter.name }}</h3>
+            <p><strong>Email:</strong> {{ adopter.email }}</p>
+            <p><strong>Phone:</strong> {{ adopter.phone }}</p>
+            <p><strong>Status:</strong> <span class="status">{{ adopter.status }}</span></p>
+          </div>
+          <div class="action-buttons">
+            <button class="delete-btn" (click)="deleteAdopter(adopter.id)">Delete</button>
+          </div>
+        </li>
+      </ul>
+  
+      <ng-template #noAdopters>
+        <p class="no-adopters-message">No adopters available. Add a new adopter below!</p>
+      </ng-template>
+    </div>
+  
+    
+    <div class="add-adopter-section">
+      <h2>Add New Adopter</h2>
+      <form (ngSubmit)="addAdopter()" #adopterForm="ngForm">
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          [(ngModel)]="newAdopter.name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          [(ngModel)]="newAdopter.email"
+          required
+        />
+        <input
+          type="text"
+          name="phone"
+          placeholder="Phone"
+          [(ngModel)]="newAdopter.phone"
+          required
+        />
+        <button type="submit" class="add-btn" [disabled]="adopterForm.invalid">Add Adopter</button>
+      </form>
+    </div>
+    <app-notification [message]="notificationMessage" [type]="notificationType"></app-notification>
+  </div>
+  
