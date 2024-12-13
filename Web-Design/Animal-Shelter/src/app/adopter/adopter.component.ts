@@ -20,13 +20,22 @@ export class AdopterComponent implements OnInit {
 
   notificationMessage = '';
   notificationType: 'success' | 'error' = 'success';
-
+  searchTerm: string = '';
+  filteredAdopters = [...this.adopters];
   newAdopter = { id: 0, name: '', email: '', phone: '', status: 'Pending' };
 
   constructor() {}
 
   ngOnInit(): void {}
 
+  filterAdopters(): void{
+    this.filteredAdopters = this.adopters.filter(adopters => {
+      return adopters.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      adopters.email.toLowerCase().includes(this.searchTerm.toLowerCase())||
+      adopters.phone.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      adopters.id.toString().includes(this.searchTerm);
+    })
+  }
   addAdopter(): void {
     if (this.newAdopter.name && this.newAdopter.email && this.newAdopter.phone) {
       this.newAdopter.id = this.adopters.length + 1;

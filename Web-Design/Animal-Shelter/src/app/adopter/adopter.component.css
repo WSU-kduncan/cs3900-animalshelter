@@ -27,7 +27,19 @@
     line-height: 1.5;
   }
   
-  
+  .search-bar {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .search-bar input {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 400px;
+  }
   .adopter-list-section h2 {
     color: #333;
     font-size: 1.8rem;

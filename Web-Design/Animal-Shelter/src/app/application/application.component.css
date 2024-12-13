@@ -27,7 +27,58 @@
     line-height: 1.5;
   }
   
+  .search-bar {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .search-bar input {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 400px;
+  }
+  .add-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
   
+  .add-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .add-application-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .add-application-form input,
+  .add-application-form select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .add-application-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .add-application-form button:hover {
+    background-color: #45a049;
+  }
   .applications-list h2 {
     color: #333;
     font-size: 1.8rem;

@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Pet } from '../model/pet.model';
 import { HttpClient } from '@angular/common/http';
-
+import { Observable } from 'rxjs';
 @Injectable({
 providedIn: 'root'
 })
 export class PetService {
-
+    private apiUrl = 'http://localhost:8080/pets';
 private pets:Pet[] = [
     /*{  id: 1,
         name: 'Buddy',
@@ -31,6 +31,10 @@ private pets:Pet[] = [
     
 ];
 constructor(private http: HttpClient) { }
+
+getAvailablePets(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
+  }
 
 //Haven't tested if this works yet
 

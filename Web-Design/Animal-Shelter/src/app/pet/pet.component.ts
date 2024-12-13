@@ -30,13 +30,22 @@ export class PetComponent implements OnInit {
   };
   notificationMessage = '';
   notificationType: 'success' | 'error' = 'success';
-
+  searchTerm: string = '';
+  filteredPets = [...this.pets]
   constructor(
     private readonly petService: PetService,
     private readonly route: ActivatedRoute,
     private readonly router: Router
   ) {}
-
+  filterPets(): void{
+    this.filteredPets = this.pets.filter(pets => {
+      return pets.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      pets.species.toLowerCase().includes(this.searchTerm.toLowerCase())||
+      pets.breed.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      pets.sex.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      pets.id.toString().includes(this.searchTerm);
+    })
+  }
   ngOnInit(): void {
     this.loadPets();
   }
